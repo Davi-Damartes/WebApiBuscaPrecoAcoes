@@ -1,18 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Vantage.Model;
 
 namespace Vantage.Controllers
 {
-	[Route("[controller]")]
+    [Route("[controller]")]
 	public class ApiAcaoController : ControllerBase
 	{
 		private readonly IHttpClientFactory _httpClientFactory;
@@ -22,8 +14,8 @@ namespace Vantage.Controllers
 			_httpClientFactory = httpClientFactory;
 		}
 
-		[HttpGet("PrecoAcaoDiario")]
-		public async Task<IActionResult> TestAsync(string apiKeyAcesso)
+		[HttpGet("BuscarValoresDiario/{apiKeyAcesso}")]
+		public async Task<IActionResult> AcaoDiaria(string apiKeyAcesso)
 		{
 			var httpClient = _httpClientFactory.CreateClient();
 			var response = await httpClient.GetAsync($"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=PETR4.SA&apikey={apiKeyAcesso}");
@@ -70,7 +62,7 @@ namespace Vantage.Controllers
 		}
 		
 		[HttpGet("PrecoAcaoMensal")]
-		public async Task<IActionResult> TestAsync2(string apiKeyAcesso)
+		public async Task<IActionResult> AcaoMensal(string apiKeyAcesso)
 		{
 			var httpClient = _httpClientFactory.CreateClient();
 			var response = await httpClient.GetAsync("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=ITUB4.SA&apikey={apiKeyAcesso}");
