@@ -17,7 +17,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## 🚀 Instalação e execução
 
 1. Faça um clone desse repositório;
-2. Certifique-se que tenha istaldo o Runtime Do .Net para rodar a aplicação.
+2. Certifique-se que tenha instaldo o Runtime Do .Net para rodar a aplicação.
 3. Entre na pasta e rode o comando no terminal `dotnet watch run`;
 
 ## 🤔 Como contribuir para o projeto
