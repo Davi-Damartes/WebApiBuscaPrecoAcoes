@@ -29,4 +29,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
    > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
 
 
-Feito com Dedicação por Davi Lima 👋🏽 [Entre em contato!](https://www.linkedin.com/in/davi-lima-434605303/)
+Feito com Dedicação por Davi Lima 👋🏽 [Entre em contato!](https://www.linkedin.com/in/davi-lima-643870313/)
